@@ -8,7 +8,7 @@ namespace ESGI.DesignPattern.Projet
     {
         private Player p1;
         private Player p2;
-        private IScoreNaming _scoreNaming;
+        private IScore _score;
 
 
         public TennisGame(Player player1, Player player2)
@@ -25,9 +25,9 @@ namespace ESGI.DesignPattern.Projet
 
         public string GetScore()
         {
-            _scoreNaming = new ScoreNaming(p1, p2);
+            _score = new Score(p1, p2);
 
-            return _scoreNaming.GetScoreName(p1, p2);
+            return _score.GetScoreName(p1, p2);
         }
     }
 }

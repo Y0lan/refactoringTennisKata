@@ -2,12 +2,12 @@ namespace ESGI.DesignPattern.Projet.Rules
 {
     public class LessThan3Calculator : ITennisScoreCalculator
     {
-        public string CalculateScoreName(Player p1, Player p2)
+        public string CalculateScore(Player p1, Player p2)
         {
-            return GetScoreName(p1.GetScore()) + "-" + GetScoreName(p2.GetScore());
+            return GetScore(p1.GetScore()) + "-" + GetScore(p2.GetScore());
         }
 
-        private static string GetScoreName(int score)
+        private static string GetScore(int score)
         {
             return score switch
             {
@@ -17,6 +17,11 @@ namespace ESGI.DesignPattern.Projet.Rules
                 3 => "Forty",
                 _ => ""
             };
+        }
+
+        public static ITennisScoreCalculator create()
+        {
+            return new LessThan3Calculator();
         }
     }
 }
