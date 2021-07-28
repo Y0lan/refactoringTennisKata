@@ -1,6 +1,5 @@
-using System.Security.Cryptography;
 
-namespace ESGI.DesignPattern.Projet.Rules
+namespace ESGI.DesignPattern.Projet.Calculators
 {
     public class GreaterThanEqual4Calculator : ITennisScoreCalculator
     {
@@ -22,7 +21,7 @@ namespace ESGI.DesignPattern.Projet.Rules
             return scoreDifferenceBetweenPlayers >= 2 ? p1.GetName() : p2.GetName();
         }
 
-        public static ITennisScoreCalculator create()
+        public static ITennisScoreCalculator Create()
         {
             return new GreaterThanEqual4Calculator();
         }

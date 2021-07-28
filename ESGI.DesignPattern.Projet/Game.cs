@@ -6,15 +6,15 @@ namespace ESGI.DesignPattern.Projet
 {
     class TennisGame : IGame
     {
-        private Player p1;
-        private Player p2;
+        private readonly Player _p1;
+        private readonly Player _p2;
         private IScore _score;
 
 
         public TennisGame(Player player1, Player player2)
         {
-            p1 = player1;
-            p2 = player2;
+            _p1 = player1;
+            _p2 = player2;
         }
 
         public void WonPoint(Player player)
@@ -25,9 +25,9 @@ namespace ESGI.DesignPattern.Projet
 
         public string GetScore()
         {
-            _score = new Score(p1, p2);
+            _score = new Score(_p1, _p2);
 
-            return _score.GetScoreName(p1, p2);
+            return _score.GetScoreName(_p1, _p2);
         }
     }
 }

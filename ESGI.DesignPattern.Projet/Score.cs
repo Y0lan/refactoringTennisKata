@@ -1,25 +1,24 @@
-using System.Security.Cryptography;
-using ESGI.DesignPattern.Projet.Rules;
+using ESGI.DesignPattern.Projet.Calculators;
 
 namespace ESGI.DesignPattern.Projet
 {
     public class Score : IScore
     {
-        private ITennisScoreCalculator _calculator;
+        private readonly ITennisScoreCalculator _calculator;
 
         public Score(Player p1, Player p2)
         {
             if (isEquality(p1, p2))
             {
-                _calculator = EqualScoreCalculator.create();
+                _calculator = EqualScoreCalculator.Create();
             }
             else if (isGreaterThanOrEqualTo4(p1, p2))
             {
-                _calculator = GreaterThanEqual4Calculator.create();
+                _calculator = GreaterThanEqual4Calculator.Create();
             }
             else
             {
-                _calculator = LessThan3Calculator.create();
+                _calculator = LessThan3Calculator.Create();
             }
         }
 

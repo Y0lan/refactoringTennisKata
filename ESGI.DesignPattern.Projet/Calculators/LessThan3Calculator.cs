@@ -1,4 +1,4 @@
-namespace ESGI.DesignPattern.Projet.Rules
+namespace ESGI.DesignPattern.Projet.Calculators
 {
     public class LessThan3Calculator : ITennisScoreCalculator
     {
@@ -19,7 +19,7 @@ namespace ESGI.DesignPattern.Projet.Rules
             };
         }
 
-        public static ITennisScoreCalculator create()
+        public static ITennisScoreCalculator Create()
         {
             return new LessThan3Calculator();
         }

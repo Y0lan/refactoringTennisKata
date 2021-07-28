@@ -1,4 +1,4 @@
-namespace ESGI.DesignPattern.Projet.Rules
+namespace ESGI.DesignPattern.Projet.Calculators
 {
     public class EqualScoreCalculator : ITennisScoreCalculator
     {
@@ -14,7 +14,7 @@ namespace ESGI.DesignPattern.Projet.Rules
             return score;
         }
 
-        public static ITennisScoreCalculator create()
+        public static ITennisScoreCalculator Create()
         {
             return new EqualScoreCalculator();
         }

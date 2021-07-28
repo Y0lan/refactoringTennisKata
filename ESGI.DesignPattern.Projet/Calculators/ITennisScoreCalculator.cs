@@ -1,4 +1,4 @@
-namespace ESGI.DesignPattern.Projet.Rules
+namespace ESGI.DesignPattern.Projet.Calculators
 {
     public interface ITennisScoreCalculator
     {
