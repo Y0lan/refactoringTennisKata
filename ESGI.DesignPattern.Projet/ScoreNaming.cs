@@ -3,16 +3,21 @@ using ESGI.DesignPattern.Projet.Rules;
 
 namespace ESGI.DesignPattern.Projet
 {
-    public class ScoreNaming : IScoreNamer
+    public class ScoreNaming : IScoreNaming
     {
         private ITennisScoreCalculator _calculator;
+
+        public ScoreNaming(Player p1, Player p2)
+        {
+            _calculator = CalculateScoreName(p1, p2);
+        }
 
         public string GetScoreName(Player p1, Player p2)
         {
             return _calculator.CalculateScoreName(p1, p2);
         }
 
-        public ITennisScoreCalculator GetRulesCalculator(Player p1, Player p2)
+        private ITennisScoreCalculator CalculateScoreName(Player p1, Player p2)
         {
             if (isEquality(p1, p2))
             {
@@ -27,12 +32,12 @@ namespace ESGI.DesignPattern.Projet
             return new LessThan3Calculator();
         }
 
-        public bool isEquality(Player p1, Player p2)
+        private bool isEquality(Player p1, Player p2)
         {
             return p1.GetScore() == p2.GetScore();
         }
 
-        public bool isGreaterThanOrEqualTo4(Player p1, Player p2)
+        private bool isGreaterThanOrEqualTo4(Player p1, Player p2)
         {
             return p1.GetScore() >= 4 || p2.GetScore() >= 4;
         }

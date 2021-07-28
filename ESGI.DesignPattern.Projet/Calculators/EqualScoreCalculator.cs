@@ -1,6 +1,6 @@
 namespace ESGI.DesignPattern.Projet.Rules
 {
-    public class EqualScore : ITennisScoreCalculator
+    public class EqualScoreCalculator : ITennisScoreCalculator
     {
         public string CalculateScoreName(Player p1, Player p2)
         {

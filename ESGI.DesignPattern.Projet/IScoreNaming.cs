@@ -1,6 +1,6 @@
 namespace ESGI.DesignPattern.Projet
 {
-    public interface IScoreNamer
+    public interface IScoreNaming
     {
         string GetScoreName(Player p1, Player p2);
     }

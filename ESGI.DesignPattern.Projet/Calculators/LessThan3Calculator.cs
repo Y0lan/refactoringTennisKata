@@ -1,6 +1,6 @@
 namespace ESGI.DesignPattern.Projet.Rules
 {
-    public class LessThan3 : ITennisScoreCalculator
+    public class LessThan3Calculator : ITennisScoreCalculator
     {
         public string CalculateScoreName(Player p1, Player p2)
         {

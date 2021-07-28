@@ -7,9 +7,9 @@ namespace ESGI.DesignPattern.Projet
         private int _score;
         private string _name;
 
-        public Player(int score)
+        public Player()
         {
-            _score = score;
+            _score = 0;
         }
 
         public int GetScore()
@@ -30,12 +30,6 @@ namespace ESGI.DesignPattern.Projet
         public void SetName(string newName)
         {
             _name = newName;
-        }
-
-        public void AddPoint()
-        {
-            var newScore = _score + 1;
-            SetScore(newScore);
         }
     }
 }
